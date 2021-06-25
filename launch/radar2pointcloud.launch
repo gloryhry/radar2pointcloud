@@ -1,0 +1,19 @@
+<launch>
+<!--     <param name="use_sim_time" value="true"/>-->
+
+<!--    <node pkg="tf" type="static_transform_publisher" name="base_gps_broadcaster" args="4.900, -0.115, 0.000 0.005 0 0 /base_footprint /velo16_front_middle 100" />-->
+
+    <node pkg="radar2pointcloud" type="radar2pointcloud" name="radar_trans">
+        <param name="radar_param" value="radar_param.yaml" />
+    </node> 
+
+    <node pkg="radar2pointcloud" type="radar_combined" name="radar_combined" >
+        <param name="front" value="/RadarDetection/Pointcloud2/Near_5" />
+        <param name="leftfront" value="/RadarDetection/Pointcloud2/Near_3" />
+        <param name="rightfront" value="/RadarDetection/Pointcloud2/Near_4" />
+        <param name="leftback" value="/RadarDetection/Pointcloud2/Near_1" />
+        <param name="rightback" value="/RadarDetection/Pointcloud2/Near_2" />
+    </node>
+
+    <!-- <node pkg="rviz" type="rviz" name="rviz"/> -->
+</launch>

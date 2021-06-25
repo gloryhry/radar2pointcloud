@@ -1,0 +1,39 @@
+front: 
+  sub_topic: /RadarDetectionImageNear_5
+  pub_topic: /RadarDetection/Pointcloud2/Near_5
+  offset_x: -0.106221
+  offset_y: 0.109482
+  rotation: 1.61641845
+  frame_id: velo16_front_middle
+
+leftfront: 
+  sub_topic: /RadarDetectionImageNear_3
+  pub_topic: /RadarDetection/Pointcloud2/Near_3
+  offset_x: -0.1035707
+  offset_y: -0.707823
+  rotation: 1.3983813680170125
+  frame_id: velo16_front_left
+
+rightfront: 
+  sub_topic: /RadarDetectionImageNear_4
+  pub_topic: /RadarDetection/Pointcloud2/Near_4
+  offset_x: -0.1844783
+  offset_y: 0.706248
+  rotation: 1.48318977779283
+  frame_id: velo16_front_right
+
+leftback: 
+  sub_topic: /RadarDetectionImageNear_1
+  pub_topic: /RadarDetection/Pointcloud2/Near_1
+  offset_x: -0.957704
+  offset_y: 4.51128
+  rotation: 1.4056506778910212
+  frame_id: velo16_front_left
+
+rightback: 
+  sub_topic: /RadarDetectionImageNear_2
+  pub_topic: /RadarDetection/Pointcloud2/Near_2
+  offset_x: 0.158231
+  offset_y: -4.78012
+  rotation: 1.5132655963221024
+  frame_id: velo16_front_right
