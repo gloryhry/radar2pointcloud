@@ -11,3 +11,27 @@ Use to transfer radar msgs into pointcloud in ros.
 ## Dependent
 
 [yaml-cpp](https://github.com/jbeder/yaml-cpp.git)
+
+## Require messages
+
+- [ecal_to_ros](https://github.com/gloryhry/Ecal-to-ROS)
+- [gps_msgs](https://github.com/gloryhry/gps_msgs)
+
+## How to use
+
+1. install dependent ([yaml-cpp](https://github.com/jbeder/yaml-cpp.git))
+2. run code:
+```mkdir catkin_ws
+cd catkin_ws && mkdir src
+cd src && mkdir Msgs
+cd Msgs
+git clone https://github.com/gloryhry/gps_msgs.git
+git clone https://github.com/gloryhry/Ecal-to-ROS.git
+cd ..
+git clone https://github.com/gloryhry/radar2pointcloud.git
+cd ..
+catkin_make
+source devel/setup.bash 
+roslaunch radar2pointcloud radar2pointcloud.launch
+```
+3. play rosbag.
